@@ -16,7 +16,7 @@ Using java8
 Use Streams and Lambdas
 Use at least 3 intermediate  and 3 terminal operations.
 
-Assignment #4 - see quintrix-spring file
+Assignment #4 - *see quintrix-spring file*
 Create Spring Boot App from start.spring.io, create Hello World API and push to GitHub
 	Create APIs - GET, POST, use queryParams/requestParams, pathParameter, RequestBody
 
