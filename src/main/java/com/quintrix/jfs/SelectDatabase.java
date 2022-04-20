@@ -5,14 +5,13 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class SelectDataDemo {
+public class SelectDatabase {
 
   public static void main(String[] args) {
 
     Connection connection = null;
-    // Statement insertStmt = null;
     Statement selectStmt = null;
-
+    // connects to local database
     try {
       Class.forName("com.mysql.cj.jdbc.Driver");
       connection =
@@ -39,13 +38,16 @@ public class SelectDataDemo {
         // System.out.println(rs.getString(3)); // Third Column
         // System.out.println(rs.getString(4)); // Fourth Column
       }
+      // catches exception to select
     } catch (Exception e) {
       e.printStackTrace();
     } finally {
+      // closes connection
       try {
         selectStmt.close();
         // insertStmt.close();
         connection.close();
+        // catches exception to close
       } catch (Exception e) {
         e.printStackTrace();
       }
