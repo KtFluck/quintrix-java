@@ -1,5 +1,6 @@
 package com.quintrix.jfs;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -56,8 +57,7 @@ public class Java8Examples {
     distinctStream.forEach(name -> System.out.println(name));
 
     // Intermediate Operations: peek (as in sneak peek) returns elements filter, mapped to uppercase
-    // and collected in
-    // a list
+    // and collected in a list
     Stream.of("one", "two", "three", "four").filter(e -> e.length() > 3)
         .peek(e -> System.out.println("Filtered value: " + e)).map(String::toUpperCase)
         .peek(e -> System.out.println("Mapped value: " + e)).collect(Collectors.toList());
@@ -84,6 +84,9 @@ public class Java8Examples {
     int sum = Arrays.stream(numbers).reduce(0, (x, y) -> (x + y));
     System.out.println("sum = " + sum);
 
+
+
+    System.out.println(LocalDate.now());
 
   }
 
